@@ -1,0 +1,38 @@
+#pages {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.product_list {
+  width: 100%;
+}
+
+.pages_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.product_list h1 {
+  font-size: 40px;
+  /* font-weight: 700; */
+  margin-bottom: 1em;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+}
+
+.product_list h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

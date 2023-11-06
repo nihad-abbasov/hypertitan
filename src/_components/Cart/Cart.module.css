@@ -1,0 +1,21 @@
+
+/* .cart_wrapper table .product-thumbnail img {
+  margin: 0 auto;
+} */
+
+.quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.cart_wrapper aside button:hover {
+  background-color: rgb(1, 113, 1);
+  transition: 0.5s ease all;
+  transform: translateY(5px);
+}
+
+.fade_out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}

@@ -1,0 +1,12 @@
+.buttonsWrapper button {
+  border-radius: 30px;
+  padding: 9%;
+}
+
+.buttonsWrapper button:first-child {
+  box-shadow: 0 0 4px 2px #0000002e;
+}
+
+.buttonsWrapper button:last-child {
+  box-shadow: 0 0 4px 2px #ffffff2e;
+}

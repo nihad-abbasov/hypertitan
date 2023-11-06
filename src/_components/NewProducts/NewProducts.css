@@ -1,0 +1,11 @@
+#new-products {
+    margin: 4em 0;
+}
+
+#new-products>h1 {
+    margin-bottom: 1em;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #0859d3;
+}

@@ -1,0 +1,265 @@
+.mini-cart {
+  position: absolute;
+  right: 25%;
+  bottom: -10px;
+  width: 600px;
+}
+
+.mini-cart-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: none;
+
+  animation: fadeMinicartIn 0.3s;
+  -webkit-animation: fadeMinicartIn 0.3s;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: #00000030 0px 3px 9px 6px;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  min-width: 400px;
+}
+
+.mini-cart.open .mini-cart-content {
+  z-index: 100;
+  display: block;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+
+.mini-cart-content::before {
+  position: absolute;
+  top: -20px;
+  right: 10%;
+
+  content: "";
+  border-bottom: 20px solid #fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.mini-cart h2 {
+  border-bottom: 2px solid gray;
+}
+
+.mini-cart h2 ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.mini-cart h2 ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.minicart_wrapper > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-height: 500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  margin-bottom: 10px;
+}
+
+.minicart_wrapper > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px 0;
+}
+
+.minicart_wrapper > ul > li > img {
+  width: 25%;
+  height: 100%;
+}
+
+.minicart_wrapper > ul > li:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.minicart_wrapper > ul > li:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+}
+
+.minicart_wrapper > ul > li div:last-child {
+  width: 15%;
+}
+
+.minicart_wrapper > ul > li > div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes fadeMinicartIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.minicartCartBtns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 2px solid gray;
+}
+
+.minicartCartBtns a {
+  width: 40%;
+  border-radius: 4px;
+  transition: 0.2s ease all;
+  text-align: center;
+  font-weight: 600;
+}
+
+.minicartCartBtns a:nth-child(2) {
+  position: relative;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  /* border-radius: 0.8em; */
+  /* border: 1px solid #000; */
+  background: linear-gradient(to right, #16ac2f, #03c000);
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.minicartCartBtns a:nth-child(2) span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+}
+
+.minicartCartBtns a:nth-child(2)::before,
+.minicartCartBtns a:nth-child(2)::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.minicartCartBtns a:nth-child(2)::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.minicartCartBtns a:nth-child(2):hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.minicartCartBtns a:nth-child(2):active {
+  transform: scale(0.95);
+}
+
+.minicartCartBtns a:first-child {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.minicartCartBtns a:first-child:hover {
+  /* box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3); */
+  background-color: #000;
+  color: #fff;
+  transition: 0.4s ease all;
+}
+
+#no-products {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.remove_product-btn {
+  cursor: pointer;
+}
+
+.remove_product-btn svg {
+  transition: 0.2s ease all;
+}
+
+.remove_product-btn svg:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease all;
+}
+
+.minicart_wrapper > ul > li div:not(:last-child) button {
+  border: 1px solid black;
+  padding: 0 8px;
+  transition: 0.1s ease all;
+}
+
+.minicart_wrapper > ul > li div:not(:last-child) button:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.2s ease all;
+}
+
+.minicart_wrapper > ul > li div:not(:last-child) button:active {
+  background-color: #6a6a6a;
+  transition: 0.1s ease all;
+}
+
+@keyframes removeItemAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.cart-item {
+  transition: opacity 0.5s ease;
+}
+
+.remove-animation {
+  animation: removeItemAnimation 0.5s ease forwards;
+}
+
+.fade_out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}

@@ -1,0 +1,50 @@
+#profile {
+  width: 30%;
+}
+
+.profile_wrapper {
+}
+
+.profile_operations {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; */
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+.single_operation {
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+
+  /* border-radius: 6px; */
+}
+
+.single_operation:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.single_operation:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.single_operation:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.single_operation:hover {
+  background-color: #196b3e;
+  color: #fff;
+}
+
+.single_operation a {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 12px 25px;
+}

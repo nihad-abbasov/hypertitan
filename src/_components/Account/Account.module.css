@@ -1,0 +1,209 @@
+#account {
+  margin-bottom: 4em;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#account h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.account_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.account-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+}
+
+.account-item h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.account-item p {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+#login_container,
+#login_containerRegister,
+#signup_container {
+  width: 45%;
+}
+
+.input_wrapper.username {
+  animation: fadeInAndTransform 2s;
+}
+
+/* #login_container,
+#login_containerRegister {
+  animation: fadeIn 2s;
+} */
+
+#registration_divider {
+  width: 1px;
+  background: gray;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.input_wrapper label {
+  margin-bottom: 3px;
+}
+
+.input_wrapper label span::after {
+  content: "*";
+  padding-left: 5px;
+}
+
+.input_wrapper input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+#account form > button {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: #1ac21a;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  transition: 0.3s ease all;
+}
+
+#account form > button:hover {
+  background: #15b415;
+  transition: 0.3s ease all;
+}
+
+#password_details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rememberMe,
+.forgotPassword {
+  font-size: 14px;
+}
+
+.rememberMe input {
+  margin-right: 5px;
+}
+
+.rememberMe input[type="checkbox"] {
+  accent-color: #1ac21a;
+}
+
+.forgotPassword:hover {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+#signup_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+#signup_container h3,
+#signup_container p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#signup_container button {
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 25%;
+  background: #0045c7;
+  border-radius: 2px;
+  color: #fff;
+  transition: 0.3s ease all;
+}
+
+#signup_container button:hover {
+  background: #003291;
+  transition: 0.3s ease all;
+}
+
+@keyframes fadeInAndTransform {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#confirmationForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+
+#confirmationForm p,
+#confirmationForm input {
+  margin-bottom: 15px;
+}
+
+#confirmationForm p {
+  font-size: 14px;
+}
+
+#confirmationForm input {
+  padding: 10px 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #account {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #registration_divider {
+    width: 60%;
+    height: 1px;
+    margin: 1em 0px;
+  }
+}

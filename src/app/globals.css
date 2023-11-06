@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "@splidejs/splide/dist/css/splide.min.css"; */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  font-family: var(--font-poppins);
+}
+
+/* for sticky aside navbar */
+main {
+  position: relative;
+}
+
+[data-theme="dark"] body {
+  background-color: #000;
+  color: red;
+}
+
+/* [data-theme='dark'],
+[data-theme='dark'] body {
+  color: #fff;
+  background: #000;
+} */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    right: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    right: 52px;
+  }
+} */
+
+@media screen and (max-width: 990px) {
+  .container {
+    width: 96%;
+  }
+}
+
+.splide {
+  width: 100%;
+  margin: 2em auto;
+}
+
+.splide__slide {
+  width: 20% !important;
+  height: 10% !important;
+}
+
+.splide__list {
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.splide__track--draggable {
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
+.splide__arrow svg {
+  fill: #fff
+}
+
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop {
+  animation: pop 0.3s ease forwards;
+}
