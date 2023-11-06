@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axiosPrivate from '../../../config/axiosPrivate';
 
 export const fetchFavorites = createAsyncThunk(
   "favorites/fetchFavorites",
