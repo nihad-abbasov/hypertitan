@@ -3,12 +3,6 @@ main {
   padding-right: 0 !important;
 }
 
-#product_list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
 #product_list > li {
   display: flex;
   flex-direction: column;

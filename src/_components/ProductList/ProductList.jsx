@@ -56,7 +56,7 @@ export const ProductList = ({
 
       <Navbar />
 
-      <ul id="product_list" className="w-[78%] grid-cols-4">
+      <ul id="product_list" className="w-[78%] grid grid-cols-4 gap-[15px]">
         {loading ? (
           <Loading />
         ) : products && Array.isArray(products) && products.length > 0 ? (
