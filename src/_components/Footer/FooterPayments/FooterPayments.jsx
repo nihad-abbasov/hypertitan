@@ -23,15 +23,15 @@ export const FooterPayments = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className="grid grid-cols-6 w-full md:w-[40%] bg-white p-0.5 rounded-md">
       {payments.map((payment) => {
         return (
-          <li key={payment.id}>
+          <li key={payment.id} className="flex items-center justify-center w-[60%] justify-self-center">
             <Image
               width={0}
               height={0}
               sizes="100vw"
-              // style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", height: "auto" }}
               src={payment.image}
               alt={payment.name}
             />
