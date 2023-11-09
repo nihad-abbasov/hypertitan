@@ -1,9 +1,7 @@
 "use client";
 
 import Favorites from "@components/Favorites/Favorites";
-import { useState, useEffect } from "react";
-import axiosInstance from "../../../config/axios";
-import axiosPrivate from "../../../config/axiosPrivate";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { fetchFavorites } from "../../redux/features/favoritesSlice";
 import { Loading } from "../../../_components/Loading/Loading";
