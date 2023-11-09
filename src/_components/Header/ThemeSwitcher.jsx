@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import "./theme-switcher.css";
 
 export const ThemeSwitcher = () => {
-  const { theme = "dark", setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
     if (theme === "light") {
