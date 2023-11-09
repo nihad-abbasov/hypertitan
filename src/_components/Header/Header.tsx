@@ -1,8 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ThemeSwitcher } from "@components/Header/ThemeSwitcher";
 import FunctionalHeader from "@components/Header/FunctionalHeader/FunctionalHeader";
-import "./Header.css";
 
 // import Navbar from "@components/Header/Navbar/Navbar";
 
@@ -11,17 +9,19 @@ export const Header = async () => {
     <header>
       <div
         id="informative"
-        className="text-black bg-white dark:bg-zinc-700 dark:text-white"
+        className="text-black bg-white dark:bg-zinc-700 dark:text-white py-[8px] px-0"
       >
-        <div className="container informative_wrapper">
-          <div className="info_left">
-            <span>Bakı şəhərdaxili pulsuz çatdırılma</span>
-            <div className="seperator_border"></div>
+        <div className="container flex flex-row justify-between">
+          <div className="flex flex-row items-center text-sm">
+            <span className="mr-[10px]">
+              Bakı şəhərdaxili pulsuz çatdırılma
+            </span>
+            <div className="seperator_border h-[70%] w-[1px] bg-[#7c7c7c] mr-[10px]"></div>
             <Link href="/delivery">Çatdırılma və ödəniş</Link>
           </div>
-          <div className="info_right">
-            <span>Bizi izləyin</span>
-            <div className="header_social_icons">
+          <div className="flex flex-row items-center text-sm">
+            <span className="mr-[15px]">Bizi izləyin</span>
+            <div className="flex flex-row items-center text-sm mr-[10px]">
               <Link
                 target="_blank"
                 href="https://www.facebook.com/hypertitanbaku/"
@@ -30,6 +30,7 @@ export const Header = async () => {
               >
                 {/* <TfiFacebook /> */}
                 <svg
+                  className="mr-[7px] w-[15px] h-[15px] transition-all duration-200 ease-out hover:opacity-80"
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
@@ -51,6 +52,7 @@ export const Header = async () => {
               >
                 {/* <SiInstagram /> */}
                 <svg
+                  className="w-[15px] h-[15px] transition-all duration-200 ease-out hover:opacity-80"
                   stroke="currentColor"
                   fill="currentColor"
                   strokeWidth="0"
@@ -65,7 +67,7 @@ export const Header = async () => {
                 </svg>
               </Link>
             </div>
-            <div className="seperator_border"></div>
+            <div className="seperator_border h-[70%] w-[1px] bg-[#7c7c7c] mr-[10px]"></div>
             <p>+994 50 323 19 98</p>
             <ThemeSwitcher />
           </div>
