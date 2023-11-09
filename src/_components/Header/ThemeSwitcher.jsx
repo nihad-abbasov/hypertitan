@@ -2,17 +2,24 @@
 
 import { useTheme } from "next-themes";
 import "./theme-switcher.css";
+import { useState, useEffect } from "react";
 
 export const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  const { theme = "dark", setTheme } = useTheme();
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    theme === "light" ? setTheme("dark") : setTheme("light");
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="ml-[10px]">
