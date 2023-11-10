@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ThemeSwitcher } from "@components/Header/ThemeSwitcher";
+import ThemeSwitcher from "@components/Header/ThemeSwitcher";
 import FunctionalHeader from "@components/Header/FunctionalHeader/FunctionalHeader";
 
 // import Navbar from "@components/Header/Navbar/Navbar";
