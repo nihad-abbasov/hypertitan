@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import "./theme-switcher.css";
 import { useState, useEffect } from "react";
 
 const ThemeSwitcher = () => {
@@ -32,7 +31,7 @@ const ThemeSwitcher = () => {
             aria-label="Switch to Light Mode"
             title="Switch to Light Mode"
             name="light mode"
-            className={`absolute bg-orange-600 left-0 transition-transform duration-300 ${
+            className={`absolute bg-orange-600 left-0 transition-transform duration-300 rounded-[30px] p-[9%] shadow-[0_0_4px_2px_#ffffff2e] ${
               theme === "dark" ? "translate-x-full opacity-0" : "opacity-100"
             }`}
           >
@@ -53,7 +52,7 @@ const ThemeSwitcher = () => {
             aria-label="Switch to Dark Mode"
             title="Switch to Dark Mode"
             name="dark mode"
-            className={`absolute dark:bg-gray-900 right-0 transition-transform duration-300 ${
+            className={`absolute dark:bg-gray-900 right-0 transition-transform duration-300 rounded-[30px] p-[9%] shadow-[0_0_4px_2px_#0000002e] ${
               theme === "light" ? "-translate-x-full opacity-0" : "opacity-100"
             }`}
           >
