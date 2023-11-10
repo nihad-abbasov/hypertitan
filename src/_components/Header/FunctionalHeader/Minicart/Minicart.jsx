@@ -35,7 +35,7 @@ export const Minicart = ({ isOpen, onClose }) => {
     setTimeout(() => {
       dispatch(removeItem(productId));
       setFadeProductId(null);
-    }, 500);
+    }, 250);
   };
 
   const handleIncreaseQuantity = (productId) => {
