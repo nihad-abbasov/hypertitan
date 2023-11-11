@@ -13,25 +13,33 @@ export const Account = () => {
   };
 
   return (
-    <div id={styles.account} className="container text-black dark:text-white">
+    <div
+      id={styles.account}
+      className="container text-black dark:text-white flex flex-row justify-between my-[4em]"
+    >
       {!isRegistered ? (
         <Login />
       ) : (
         <Register handleLoginSignupState={handleLoginSignupState} />
       )}
 
-      <div id={styles.registration_divider}></div>
-      <div id={styles.signup_container}>
-        <h3>
+      <div
+        id={styles.registration_divider}
+        className="w-[1px] bg-gray-500"
+      ></div>
+      <div id={styles.signup_container} className="w-[45%]">
+        <h3 className="text-[25px] font-medium mb-[1em] ">
           {!isRegistered
             ? "Hesabınız yoxdur?"
             : "Artıq bir hesab yaratmısınız?"}
           ?
         </h3>
         <p>
-          Bu saytda qeydiyyatdan keçmək sizə sifariş statusunuz və tarixçənizə əlçatanlıq imkanı verir.
-          Aşağıdakı məlumatları doldurun və saniyələr ərzində yeni hesabınıza sahib olun.
-          Alqı-satqı prosesini daha sürətli və asan hala gətirmək üçün sizdən yalnız lazımi məlumatlar tələb olunur.
+          Bu saytda qeydiyyatdan keçmək sizə sifariş statusunuz və tarixçənizə
+          əlçatanlıq imkanı verir. Aşağıdakı məlumatları doldurun və saniyələr
+          ərzində yeni hesabınıza sahib olun. Alqı-satqı prosesini daha sürətli
+          və asan hala gətirmək üçün sizdən yalnız lazımi məlumatlar tələb
+          olunur.
         </p>
         <button onClick={handleLoginSignupState}>
           {!isRegistered ? "Qeydiyyat" : "Daxil ol"}

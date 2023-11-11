@@ -1,17 +1,3 @@
-#account {
-  margin-bottom: 4em;
-  margin-top: 4em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#account h3 {
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 1em;
-}
-
 .account_wrapper {
   display: flex;
   flex-direction: column;
@@ -35,12 +21,6 @@
   font-weight: 200;
 }
 
-#login_container,
-#login_containerRegister,
-#signup_container {
-  width: 45%;
-}
-
 .input_wrapper.username {
   animation: fadeInAndTransform 2s;
 }
@@ -49,22 +29,6 @@
 #login_containerRegister {
   animation: fadeIn 2s;
 } */
-
-#registration_divider {
-  width: 1px;
-  background: gray;
-}
-
-.input_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 1em;
-}
-
-.input_wrapper label {
-  margin-bottom: 3px;
-}
 
 .input_wrapper label span::after {
   content: "*";

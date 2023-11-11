@@ -155,12 +155,12 @@ export const Register = ({ handleLoginSignupState }) => {
   }
 
   return (
-    <div id={styles.login_containerRegister}>
+    <div id={styles.login_containerRegister} className="w-[45%]">
       <h3>Qeydiyyat</h3>
 
       <form onSubmit={handleFormSubmit} name="registerForm">
-        <div className={styles.input_wrapper}>
-          <label htmlFor="email">
+        <div className="flex flex-col items-start mb-[1em]">
+          <label htmlFor="email" className="mb-[3px]">
             <span>Email</span>
           </label>
           <input
@@ -173,8 +173,10 @@ export const Register = ({ handleLoginSignupState }) => {
           />
           {error.email && <AuthError>{error.email}</AuthError>}
         </div>
-        <div className={`${styles.input_wrapper} ${styles.username}`}>
-          <label htmlFor="firstname">
+        <div
+          className={`flex flex-col items-start mb-[1em] ${styles.username}`}
+        >
+          <label htmlFor="firstname" className="mb-[3px]">
             <span>Ad</span>
           </label>
           <input
@@ -186,8 +188,10 @@ export const Register = ({ handleLoginSignupState }) => {
             id="firstname"
           />
         </div>
-        <div className={`${styles.input_wrapper} ${styles.username}`}>
-          <label htmlFor="surname">
+        <div
+          className={`flex flex-col items-start mb-[1em] ${styles.username}`}
+        >
+          <label htmlFor="surname" className="mb-[3px]">
             <span>Soyad</span>
           </label>
           <input
@@ -200,7 +204,7 @@ export const Register = ({ handleLoginSignupState }) => {
           />
         </div>
         <div className={styles.input_wrapper}>
-          <label htmlFor="password">
+          <label htmlFor="password" className="mb-[3px]">
             <span>Şifrə</span>
           </label>
           <input
@@ -216,10 +220,11 @@ export const Register = ({ handleLoginSignupState }) => {
         </div>
         <p className={`${styles.privacy_text} mb-[10px]`}>
           Şəxsi məlumatlarınız sifarişinizi həyata keçirmək, bu veb-saytdakı
-                təcrübənizi dəstəkləmək və saytımızın{" "}
-                <a target="_blank" href="/privacy">
-                  gizlilik siyasətində
-                </a>{" "} təsvir olunan digər məqsədlər üçün istifadə ediləcək.
+          təcrübənizi dəstəkləmək və saytımızın{" "}
+          <a target="_blank" href="/privacy">
+            gizlilik siyasətində
+          </a>{" "}
+          təsvir olunan digər məqsədlər üçün istifadə ediləcək.
         </p>
         <button type="submit" disabled={loading}>
           Qeydiyyatdan keçin

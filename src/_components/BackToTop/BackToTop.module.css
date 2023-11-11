@@ -1,29 +1,3 @@
-#go_to_top {
-  padding: 6px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 52px;
-  bottom: 50px;
-  cursor: pointer;
-  transition: 0.2s ease all;
-  border-radius: 9px;
-  animation: fadeIn 0.5s;
-}
-
-#go_to_top:hover {
-  scale: 1.2;
-  transition: 0.2s ease all;
-}
-
-#go_to_top svg {
-  width: 100%;
-  height: 100%;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;

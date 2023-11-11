@@ -1,7 +1,6 @@
 "use client";
 
 import backToTopStyles from "./BackToTop.module.css";
-// import { RiArrowUpDoubleFill } from "react-icons/ri"
 import { useEffect, useState } from "react";
 
 export const BackToTop = () => {
@@ -20,7 +19,7 @@ export const BackToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // for smoothly scrolling
+      behavior: "smooth",
     });
   };
 
@@ -28,10 +27,8 @@ export const BackToTop = () => {
     showButton && (
       <div
         onClick={scrollToTop}
-        id={backToTopStyles.go_to_top}
-        className="bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-300 dark:to-slate-50"
+        className="bg-gradient-to-r from-slate-800 to-slate-600 dark:from-slate-300 dark:to-slate-50 p-[6px] w-[40px] h-[40px] flex justify-center items-center fixed right-[52px] bottom-[50px] cursor-pointer transition-all duration-200 rounded-[9px] hover:scale-120 hover:transition-all hover:duration-200 ease-in-out"
       >
-        {/* <RiArrowUpDoubleFill className="text-white dark:text-black" /> */}
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -41,6 +38,7 @@ export const BackToTop = () => {
           height="1em"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
         >
           <path d="M12.0001 4.83594L5.79297 11.043L7.20718 12.4573L12.0001 7.66436L16.793 12.4573L18.2072 11.043L12.0001 4.83594ZM12.0001 10.4858L5.79297 16.6929L7.20718 18.1072L12.0001 13.3143L16.793 18.1072L18.2072 16.6929L12.0001 10.4858Z"></path>
         </svg>

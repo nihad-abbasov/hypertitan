@@ -66,12 +66,12 @@ export const Login = () => {
   };
 
   return (
-    <div id={styles.login_container}>
+    <div id={styles.login_container} className="w-[45%]">
       <h3>Daxil olun</h3>
       {error && <AuthError>{error}</AuthError>}
       <form onSubmit={handleFormSubmit} name="loginForm">
-        <div className={styles.input_wrapper}>
-          <label htmlFor="email">
+        <div className="flex flex-col items-start mb-[1em]">
+          <label htmlFor="email" className="mb-[3px]">
             <span>Email</span>
           </label>
           <input
@@ -83,8 +83,8 @@ export const Login = () => {
             id="email"
           />
         </div>
-        <div className={styles.input_wrapper}>
-          <label htmlFor="password">
+        <div className="flex flex-col items-start mb-[1em]">
+          <label htmlFor="password" className="mb-[3px]">
             <span>Şifrə</span>
           </label>
           <input
