@@ -155,7 +155,7 @@ export const Minicart = ({ isOpen, onClose }) => {
       </div>
       {isOpen && (
         <div
-          className="backdrop fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.3)] z-9"
+          className="backdrop fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.3)] z-[9]"
           onClick={handleBackdropClick}
         />
       )}

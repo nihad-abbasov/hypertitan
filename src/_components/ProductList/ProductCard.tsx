@@ -162,7 +162,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
         </div>
 
         <button
-          className="w-[80%] flex items-center justify-center bg-green-600 text-white rounded-lg py-[5px] px-[10px] font-semibold hover:bg-green-800 transition duration-150 z-10 mb-[5px]"
+          className="w-[80%] flex items-center justify-center bg-green-600 text-white rounded-lg py-[5px] px-[10px] font-semibold hover:bg-green-800 transition duration-150 z-[8] mb-[5px]"
           onClick={handleAddToCart}
         >
           <svg
