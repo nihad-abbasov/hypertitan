@@ -1,5 +1,6 @@
 .wp_widget {
   position: fixed;
+  opacity: 0;
   bottom: 6.5rem;
   right: 3rem;
   animation: fadeIn 3s;
